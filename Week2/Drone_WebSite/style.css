@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Courgette|Gupter&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Gupter', serif;
+  font-family: 'Inconsolata', monospace;
 }
 
 html {
@@ -20,7 +20,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(https://cdn.wallpapersafari.com/5/12/Wuv85n.png);
+  background-image: url(https://media.giphy.com/media/t7Qb8655Z1VfBGr5XB/giphy.gif);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -28,9 +28,14 @@ header {
   text-align: center;
 }
 
+main {
+  width: 100%;
+  margin: auto;
+}
+
 h1 {
   font-family: 'Courgette', cursive;
-  color: #333;
+  color: #bae8e8;
   letter-spacing: 3rem;
   font-size: 8rem;
   font-weight: bold;
@@ -47,24 +52,24 @@ h2 {
   color: #5d5b6a;
   margin-top: 2rem;
   letter-spacing: 0.6rem;
-  display: flex;
-  justify-content: center;
-  flex-basis: 200px;
+  padding: 2%;
+  text-align: center;
   font-size: 5rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 h2:hover {
-  letter-spacing: 2rem;
+  letter-spacing: 1.4rem;
   transition: ease-in-out 2s;
 }
 
 h3 {
   font-family: 'Courgette', cursive;
   color: #5d5b6a;
-  padding: 0.5rem 2rem;
-  font-size: 1.8rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 ul {
@@ -72,73 +77,53 @@ ul {
 }
 
 img {
-  margin-top: 1rem;
-  width: 30vw;
-  height: auto;
+  width: 70%;
+  margin: 1rem auto;
+  padding: .5rem 1rem;
 }
+
+img:hover {}
 
 p {
   text-align: justify;
-  font-size: 1.4rem;
-  padding: 2rem;
-  line-height: 1.6;
+  font-size: 1.3rem;
+  padding: 1rem;
 }
 
-#grid-floats li,
-#grid-flex li {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+.grid-item:hover {
   border-radius: .8rem;
+  -webkit-box-shadow: 3px 3px 5px 6px #333;
+  -moz-box-shadow: 3px 3px 5px 6px #333;
+  box-shadow: 3px 3px 5px 6px #333;
 }
 
-
-
-
-#grid-floats li:hover>#grid-floats li {
+.grid-item {
   cursor: pointer;
-  transform: scale(.9);
-}
-
-
-
-
-#grid-floats li:nth-child(1),
-#grid-floats li:nth-child(3),
-#grid-floats li:nth-child(5),
-#grid-floats li:nth-child(7),
-#grid-floats li:nth-child(8),
-#grid-floats li:nth-child(10),
-#grid-floats li:nth-child(12),
-#grid-floats li:nth-child(14) {
-  background-color: white;
+  box-shadow: 0 10px 30px rgba(72, 214, 15, 0.12), 0 10px 20px rgba(45, 4, 53, 0.24);
+  transition: all 1.3s cubic-bezier(.25, .8, .25, 1);
+  border-radius: .8rem;
 }
 
 /* float section */
 
 #grid-floats li {
   margin: 4% 3%;
-  border: 2px solid #333;
+  border: 3px solid #333;
   width: 44%;
-  height: 440px;
   float: left;
   overflow: hidden;
+  height: 38rem;
 }
 
 #grid-floats li:first-child {
   border: 2px solid #333;
-  height: 400px;
   float: left;
   margin: 0 3%;
   width: 94%;
 }
 
-#grid-floats li:first-child img {
-  width: 50vw;
-  height: 240px;
-}
-
 #grid-floats li:last-child {
-  border: 1px solid #230444;
+  border: 2px solid #230444;
   height: 200px;
   float: left;
   margin: 0 3%;
@@ -148,7 +133,7 @@ p {
 #grid-floats li:last-child img {
   float: left;
   width: 30vw;
-  height: 140px;
+  height: 14rem;
 }
 
 #grid-floats::after {
@@ -157,48 +142,28 @@ p {
   clear: both;
 }
 
-#grid-floats li:hover {
-  cursor: pointer;
-  transform: scale(0.7);
-}
-
 /* flex section */
 
 #grid-flex {
+  justify-content: center;
+  align-items: stretch;
   display: flex;
   flex-wrap: wrap;
+  overflow: visible;
 }
 
 #grid-flex li {
-  border: 4px dotted #333;
+  border: 3px solid #333;
   flex: 1 1 42%;
   list-style-type: none;
-  height: 440px;
   margin: 3%;
-  overflow: hidden;
+
 }
 
 #grid-flex li:first-child,
 #grid-flex li:last-child {
-  flex-basis: 90%;
-  height: 400px;
-}
+  flex-basis: 100%;
 
-#grid-flex li:nth-child(1) img,
-#grid-flex li:last-child img {
-  width: 60vw;
-  height: 230px;
-}
-
-#grid-flex li:nth-child(1),
-#grid-flex li:nth-child(3),
-#grid-flex li:nth-child(5),
-#grid-flex li:nth-child(7),
-#grid-flex li:nth-child(8),
-#grid-flex li:nth-child(10),
-#grid-flex li:nth-child(12),
-#grid-flex li:nth-child(14) {
-  background-color: white;
 }
 
 @media (min-width: 600px) {
@@ -216,25 +181,11 @@ p {
     margin: 2%;
   }
 
-  img {
-    margin-top: 2rem;
-    width: 25vw;
-    height: auto;
-  }
-
   #grid-floats li:first-child,
   #grid-floats li:nth-child(2) {
     width: 46%;
     margin: 2%;
-    height: 450px;
-  }
-
-  #grid-floats li:first-child img,
-  #grid-floats li:nth-child(2) img,
-  #grid-flex li:nth-child(1) img,
-  #grid-flex li:nth-child(2) img {
-    width: 34vw;
-    height: auto;
+    height: 35rem;
   }
 
   #grid-floats li:last-child {
@@ -243,34 +194,27 @@ p {
     margin: 2%;
   }
 
-  #grid-floats li:last-child img {
-    margin-top: 2rem;
-    width: 25vw;
-    height: auto;
-    float: none;
-  }
-
   #grid-flex li:first-child,
   #grid-flex li:nth-child(2) {
     flex-basis: 46%;
-    height: 450px;
     margin: 2%;
   }
 
-  #grid-flex li {
-    flex-basis: 29%;
-    height: auto;
-    margin: 2%;
-  }
-
+  #grid-flex li,
   #grid-flex li:last-child {
     flex-basis: 29%;
-    height: 450px;
+
+    margin: 2%;
   }
 
-  #grid-flex li:last-child img {
-    width: 27vw;
-    height: auto;
+  p {
+    padding: 1rem;
+    line-height: 1.3;
+  }
+
+  #grid-floats li:last-child img {
+    float: none;
+    width: 70%;
   }
 }
 
@@ -288,27 +232,14 @@ p {
   #grid-floats li:nth-child(2),
   #grid-floats li:last-child {
     width: 23%;
-    height: 44rem;
+    height: 41rem;
     margin: 1%;
-  }
-
-  img,
-  #grid-floats li:nth-child(2) img,
-  #grid-floats li:last-child img {
-    margin-top: 2rem;
-    width: 20vw;
-    height: auto;
   }
 
   #grid-floats li:first-child {
     width: 48%;
     margin: 1%;
-    height: 44rem;
-  }
-
-  #grid-floats li:nth-child(1) img {
-    height: 350px;
-    width: 30vw;
+    height: 41rem;
   }
 
   #grid-floats li:nth-last-child(3) {
@@ -317,7 +248,6 @@ p {
 
   #grid-flex li:first-child {
     flex-basis: 48;
-    height: 45rem;
     margin: 1%;
   }
 
@@ -325,28 +255,13 @@ p {
   #grid-flex li:nth-child(2),
   #grid-flex li:nth-last-child(1) {
     flex-basis: 23%;
-    height: 45rem;
     margin: 1%;
-  }
-
-  img,
-  #grid-flex li:nth-child(2) img,
-  #grid-flex li:last-child img {
-    margin-top: 2rem;
-    width: 20vw;
-    height: auto;
-  }
-
-  #grid-flex li:first-child img {
-    height: 350px;
-    width: 30vw;
   }
 
   #grid-flex li:nth-last-child(1),
   #grid-flex li:nth-last-child(2),
   #grid-flex li:nth-last-child(3) {
     flex-basis: 23%;
-    height: 40rem;
     margin: 1%;
   }
 
