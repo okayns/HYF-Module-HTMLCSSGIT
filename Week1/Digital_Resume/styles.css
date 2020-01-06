@@ -166,13 +166,8 @@ h3 {
   padding: 30px;
 }
 
-.profile-info h2 {
-  color: #393e46;
-  font-size: 2rem;
-  margin-bottom: 15px;
-  text-align: left;
-  font-weight: 700;
-  letter-spacing: 4px;
+h2 {
+  text-transform: uppercase;
 }
 
 .info {
