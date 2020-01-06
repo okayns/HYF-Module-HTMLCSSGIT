@@ -164,6 +164,11 @@ p {
   flex-wrap: wrap;
 }
 
+#grid-flex p {
+  line-height: 1.4rem;
+}
+
+
 #grid-flex li {
   padding: .5rem;
   border: 3px solid #333;
@@ -251,7 +256,7 @@ p {
   }
 
   #grid-flex li:first-child {
-    flex-basis: 48;
+    flex-basis: 48%;
     margin: 1%;
   }
 
