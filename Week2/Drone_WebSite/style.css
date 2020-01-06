@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
 
+@font-face {
+  font-family: 'BeyondFont';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Tangerine'), url('fonts/BeyondWonderland.ttf') format('truetype');
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -13,7 +20,7 @@ html {
 
 body {
   text-align: center;
-  background-color: #8fbcd1;
+  background-color: #bbded6;
 }
 
 header {
@@ -28,17 +35,28 @@ header {
   text-align: center;
 }
 
+header:hover h1 {
+  transform: scale(1.2);
+  transition: ease 3s;
+  cursor: pointer;
+}
+
 main {
   width: 100%;
   margin: auto;
 }
 
 h1 {
-  font-family: 'Courgette', cursive;
-  color: #bae8e8;
-  letter-spacing: 3rem;
+  color: #d54d7b;
+  font-family: BeyondFont;
   font-size: 8rem;
-  font-weight: bold;
+  letter-spacing: 3rem;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 0 10px 10px #fff;
+}
+
+h1:last-of-type {
   text-transform: uppercase;
 }
 
@@ -49,19 +67,23 @@ h1:hover {
 
 h2 {
   font-family: 'Courgette', cursive;
-  color: #5d5b6a;
+  color: #2F1728;
   margin-top: 2rem;
   letter-spacing: 0.6rem;
-  padding: 2%;
+  padding: 1%;
   text-align: center;
   font-size: 5rem;
   font-weight: 700;
   text-transform: uppercase;
+  text-shadow: 0px 3px 0px #b2a98f,
+    0px 14px 10px rgba(0, 0, 0, 0.15),
+    0px 24px 2px rgba(0, 0, 0, 0.1),
+    0px 34px 30px rgba(0, 0, 0, 0.1);
 }
 
 h2:hover {
   letter-spacing: 1.4rem;
-  transition: ease-in-out 2s;
+  transition: ease-in-out 1s;
 }
 
 h3 {
@@ -82,12 +104,16 @@ img {
   padding: .5rem 1rem;
 }
 
-img:hover {}
+img:hover {
+  transform: rotateY(1080deg);
+  transition: all 5s;
+}
 
 p {
   text-align: justify;
   font-size: 1.3rem;
   padding: 1rem;
+  color: #7c677f;
 }
 
 .grid-item:hover {
@@ -100,7 +126,7 @@ p {
 .grid-item {
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(72, 214, 15, 0.12), 0 10px 20px rgba(45, 4, 53, 0.24);
-  transition: all 1.3s cubic-bezier(.25, .8, .25, 1);
+  transition: all .4s cubic-bezier(.25, .8, .25, 1);
   border-radius: .8rem;
 }
 
@@ -132,8 +158,7 @@ p {
 
 #grid-floats li:last-child img {
   float: left;
-  width: 30vw;
-  height: 14rem;
+  width: 70%;
 }
 
 #grid-floats::after {
@@ -149,7 +174,6 @@ p {
   align-items: stretch;
   display: flex;
   flex-wrap: wrap;
-  overflow: visible;
 }
 
 #grid-flex li {
@@ -157,7 +181,6 @@ p {
   flex: 1 1 42%;
   list-style-type: none;
   margin: 3%;
-
 }
 
 #grid-flex li:first-child,
@@ -203,7 +226,6 @@ p {
   #grid-flex li,
   #grid-flex li:last-child {
     flex-basis: 29%;
-
     margin: 2%;
   }
 
@@ -263,6 +285,16 @@ p {
   #grid-flex li:nth-last-child(3) {
     flex-basis: 23%;
     margin: 1%;
+  }
+
+}
+
+/* there was a little bit overflow, that solution looked better :) */
+
+@media (min-width: 1400px) {
+  #grid-floats .grid-item p {
+    line-height: 2rem;
+    margin-top: 1rem;
   }
 
 }
