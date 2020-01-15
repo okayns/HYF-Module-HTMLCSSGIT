@@ -21,7 +21,7 @@
 <body>
   <header>
     <div class="header-left">
-      <a href="javascript:void(0);" class="bars icon" onclick="myFunction()"><i class="fas fa-bars"></i></a>
+      <a href="javascript:void(0);" class="bars icon"><i class="fas fa-bars"></i></a>
       <a href="" class="logo-top">Think with <span style="color: #1873E8;">G</span><span
           style="color: #EA4335;">o</span><span style="color: #FBBD33;">o</span><span
           style="color: #1873E8;">g</span><span style="color: #4EA853;">l</span><span style="color: #EA4335;">e</span>
@@ -439,7 +439,7 @@
               style="color: #1873E8;">g</span><span style="color: #4EA853;">l</span><span
               style="color: #EA4335;">e</span>
           </a>
-          <a href="javascript:void(0);" class="hidden-bar-icon" onclick="myFunction()"><i class="fas fa-times"></i></a>
+          <a href="" class="hidden-bar-icon"><i class="fas fa-times"></i></a>
         </div>
         <div class="hidden-nav-list">
           <a href="#" class="first-element">Consumer Insights</a>
@@ -472,10 +472,6 @@
           </div>
           <hr class="list-line">
         </div>
-
-
-
-
       </div>
       <div class="hidden-nav-footer">
         <hr>
@@ -508,14 +504,23 @@
     </div>
     <!-- I used javascript to make visible the hidden navigation bar.  -->
     <script>
-      function myFunction() {
-        var x = document.getElementById("hidden-bar");
-        if (x.style.left === '-300px') {
-          x.style.left = '0px';
-        } else {
-          x.style.left = "-300px";
-        }
-      }
+      const barAction = document.querySelector("#hidden-bar");
+
+      const openButton = document.querySelector('.bars');
+
+      const closeButton = document.querySelector('.hidden-bar-icon');
+
+      openButton.addEventListener('click', openFunction);
+
+      closeButton.addEventListener('click', closeFunction);
+
+      function openFunction() {
+        barAction.style.left = '0'
+      };
+
+      function closeFunction() {
+        barAction.style.left = '-300px'
+      };
     </script>
 </body>
 
