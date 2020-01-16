@@ -904,7 +904,6 @@ footer .select:hover {
     background-color: #f5f5f5;
   }
 
-  .big-img {}
 }
 
 @media screen and (max-width: 1250px) {
@@ -1123,6 +1122,10 @@ footer .select:hover {
     .local-card .local-card-text {
       position: relative;
       padding: 2rem 0 0 0;
+    }
+
+    .local-card-text p{
+      left: 7rem;
     }
 
     .card-header {
