@@ -387,11 +387,14 @@ header .btn-sub {
 }
 
 .title-text {
-  flex-basis: 50%;
-  margin: 0 4rem 0 1rem;
+  margin: 0 7rem 0 1rem;
   text-align: left;
   letter-spacing: 1px;
   line-height: 1.6rem;
+}
+
+.title-left {
+  flex-basis: 100%;
 }
 
 .title-text h2 {
@@ -408,12 +411,12 @@ header .btn-sub {
 
 .big-img {
   border-radius: 1.3rem;
-  margin-right: 2rem;
 }
 
 .big-img img {
   width: 100%;
   border-radius: 1rem;
+  min-height: 27rem;
 }
 
 /*Section:Local*/
@@ -871,9 +874,6 @@ footer .select:hover {
 
 /* hidden navbar */
 
-
-
-
 /*mediad queries*/
 
 @media screen and (max-width: 1440px) {
@@ -896,7 +896,6 @@ footer .select:hover {
 
   .title-text {
     margin: 0 2rem;
-    flex-basis: 80%;
   }
 
   footer {
@@ -1002,8 +1001,7 @@ footer .select:hover {
     .title-content {
       display: flex;
       flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .box-text {
@@ -1017,6 +1015,7 @@ footer .select:hover {
       text-align: left;
       letter-spacing: 1px;
       line-height: 1.6rem;
+      margin-left: .5rem;
     }
 
     .big-img {
@@ -1124,7 +1123,7 @@ footer .select:hover {
       padding: 2rem 0 0 0;
     }
 
-    .local-card-text p{
+    .local-card-text p {
       left: 7rem;
     }
 
